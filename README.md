@@ -32,65 +32,117 @@ This project demonstrates expertise in:
 - Build a professional end-to-end Power BI dashboard.
 
 ---
-
 # 🗂 Dataset Information
 
-### Match Dataset
-
-Contains match-level information:
-
-| Column |
-|----------|
-| match_no |
-| date |
-| team1 |
-| team2 |
-| venue |
-| city |
-| winner |
-| toss_winner |
-| toss_decision |
-| man_of_match |
-| stage |
-| season |
+The dashboard is built using five interconnected IPL datasets that capture match-level, ball-by-ball, player, squad, and venue information.
 
 ---
 
-### Ball-by-Ball Dataset
+## 📊 1. IPL Deliveries Dataset
 
-Contains every delivery bowled in IPL matches.
+**Table Name:** `ipl_2026_deliveries_modified`
 
-| Column |
-|----------|
-| match_no |
-| innings |
-| over |
-| striker |
-| bowler |
-| runs_of_bat |
-| extras |
-| wide |
-| noballs |
-| legbyes |
-| byes |
-| total_runs |
-| wicket_type |
-| player_dismissed |
-| is_wicket |
+Contains detailed ball-by-ball information for every delivery bowled during IPL matches.
+
+| Column | Description |
+|----------|-------------|
+| match_id | Unique match identifier |
+| season | IPL season |
+| phase | Match phase (Powerplay, Middle Overs, Death Overs) |
+| match_no | Match number |
+| date | Match date |
+| venue | Stadium where match was played |
+| batting_team | Batting team |
+| bowling_team | Bowling team |
+| innings | Innings number |
+| over | Over number |
+| striker | Batsman on strike |
+| bowler | Bowler delivering the ball |
+| runs_of_bat | Runs scored from the bat |
+| extras | Extra runs awarded |
+| wide | Wide ball indicator |
+| legbyes | Leg bye runs |
+| byes | Bye runs |
+| noballs | No-ball indicator |
+| wicket_type | Type of dismissal |
+| player_dismissed | Dismissed player's name |
+| fielder | Fielder involved in dismissal |
+| total_runs | Total runs scored on the delivery |
+| is_wicket | Wicket indicator |
 
 ---
 
-### Player Dataset
+## 🏆 2. IPL Matches Dataset
 
-Contains player details and images.
+**Table Name:** `ipl_2026_matches`
 
-| Column |
-|----------|
-| player_name |
-| team_name |
-| role |
-| nationality |
-| image_url |
+Contains match-level information including results, toss outcomes, and award winners.
+
+| Column | Description |
+|----------|-------------|
+| match_no | Match number |
+| date | Match date |
+| team1 | First team |
+| team2 | Second team |
+| venue | Match venue |
+| city | Host city |
+| winner | Winning team |
+| win_by | Win method |
+| win_margin | Margin of victory |
+| toss_winner | Toss-winning team |
+| toss_decision | Bat/Bowl decision after toss |
+| man_of_match | Player of the Match |
+| stage | Tournament stage |
+| season | IPL season |
+
+---
+
+## 👤 3. Players Dataset
+
+**Table Name:** `players_with_images`
+
+Contains player information and image links used for player cards and profile visualizations.
+
+| Column | Description |
+|----------|-------------|
+| player_name | Player's full name |
+| player_id | Unique player identifier |
+| player | Player name reference |
+| prof_link | Player profile URL |
+| img_link | Player image URL |
+
+---
+
+## 🏏 4. Squads Dataset
+
+**Table Name:** `squads`
+
+Contains squad and player role information for IPL franchises.
+
+| Column | Description |
+|----------|-------------|
+| team_no | Team identifier |
+| team_name | Franchise name |
+| player | Player name |
+| nationality | Player nationality |
+| role | Playing role (Batsman, Bowler, All-Rounder, Wicketkeeper) |
+| designation | Team designation/category |
+
+---
+
+## 🏟️ 5. Venue Dataset
+
+**Table Name:** `venue`
+
+Contains venue-specific details and stadium metadata.
+
+| Column | Description |
+|----------|-------------|
+| venue_stadium | Stadium name |
+| city | Stadium city |
+| state | Stadium state |
+| capacity | Seating capacity |
+| home_team | Associated home team |
 
 ---
 
@@ -388,7 +440,7 @@ IPL_Matches[match_no]
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/IPL-Data-Analytics-Dashboard.git
+git clone https://github.com/vrindmangla/ipl-analytics.git
 ```
 
 ### Open Project
@@ -421,9 +473,9 @@ Aspiring Data Analyst | Power BI Developer | Data Enthusiast
 
 ### Connect
 
-- LinkedIn: [Add Link]
-- GitHub: [Add Link]
-- Email: [Add Email]
+- LinkedIn: https://www.linkedin.com/in/vrind-mangla-7995b11a9
+- GitHub: https://github.com/vrindmangla
+- Email: vrindmangla05@gmail.com
 
 ---
 
